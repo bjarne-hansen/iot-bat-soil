@@ -1,5 +1,5 @@
 //
-// Battery Powered Temperature Sensor Sensor with Deep Sleep and BLE.
+// Battery Powered Soil Moisture Sensor Sensor with Deep Sleep and BLE.
 // 
 #include "main.h"
 #include "debug.h"
