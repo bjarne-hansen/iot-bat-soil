@@ -1,0 +1,101 @@
+{
+    "version": 4,
+    "configurations": [
+        {
+            "name": "esp8266",
+            "compilerPath": "~/Library/Arduino15/packages/esp8266/tools/xtensa-lx106-elf-gcc/3.1.0-gcc10.3-e5f9fec/bin/xtensa-lx106-elf-c++",
+            "intelliSenseMode": "gcc-x64",
+            "includePath": [
+                "~/Library/Arduino15/packages/esp8266/hardware/esp8266/3.1.2/variants/d1_mini/",
+                "~/Library/Arduino15/packages/esp8266/hardware/esp8266/3.1.2/cores/**",
+                "~/Library/Arduino15/packages/esp8266/hardware/esp8266/3.1.2/libraries/**",
+                "~/Library/Arduino15/packages/esp8266/hardware/esp8266/3.1.2/tools/**",
+                "~/prj/arduino2/libraries/**"
+            ],
+            "forcedInclude": [
+                "~/Library/Arduino15/packages/esp8266/hardware/esp8266/3.1.2/cores/esp8266/Arduino.h"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "defines": ["ESP8266"]
+        },
+
+        {
+            "name": "esp32",
+            "compilerPath": "~/Library/Arduino15/packages/esp32/tools/xtensa-esp32-elf-gcc/esp-2021r2-patch5-8.4.0/bin/xtensa-esp32-elf-g++",
+            "compilerArgs": [
+                "-mlongcalls",
+                "-Wno-frame-address",
+                "-ffunction-sections",
+                "-fdata-sections",
+                "-Wno-error=unused-function",
+                "-Wno-error=unused-variable",
+                "-Wno-error=deprecated-declarations",
+                "-Wno-unused-parameter",
+                "-Wno-sign-compare",
+                "-freorder-blocks",
+                "-Wwrite-strings",
+                "-fstack-protector",
+                "-fstrict-volatile-bitfields",
+                "-Wno-error=unused-but-set-variable",
+                "-fno-jump-tables",
+                "-fno-tree-switch-conversion",
+                "-std=gnu++11",
+                "-fexceptions",
+                "-fno-rtti"
+            ],
+            "intelliSenseMode": "gcc-x64",
+            "includePath": [
+                "~/Library/Arduino15/packages/esp32/hardware/esp32/2.0.17/**",
+                "~/prj/arduino2/libraries/**",
+                "."
+            ],
+            "forcedInclude": [
+                "~/Library/Arduino15/packages/esp32/hardware/esp32/2.0.17/cores/esp32/Arduino.h"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "defines": [ "ESP32" ]
+        },
+        {
+            "name": "XIAOC3",
+            "compilerPath": "~/Library/Arduino15/packages/esp32/tools/xtensa-esp32-elf-gcc/esp-2021r2-patch5-8.4.0/bin/xtensa-esp32-elf-g++",
+            "compilerArgs": [
+                "-mlongcalls",
+                "-Wno-frame-address",
+                "-ffunction-sections",
+                "-fdata-sections",
+                "-Wno-error=unused-function",
+                "-Wno-error=unused-variable",
+                "-Wno-error=deprecated-declarations",
+                "-Wno-unused-parameter",
+                "-Wno-sign-compare",
+                "-freorder-blocks",
+                "-Wwrite-strings",
+                "-fstack-protector",
+                "-fstrict-volatile-bitfields",
+                "-Wno-error=unused-but-set-variable",
+                "-fno-jump-tables",
+                "-fno-tree-switch-conversion",
+                "-std=gnu++11",
+                "-fexceptions",
+                "-fno-rtti"
+            ],
+            "intelliSenseMode": "gcc-x64",
+            "includePath": [
+                "~/Library/Arduino15/packages/esp32/hardware/esp32/2.0.17/variants/XIAO_ESP32C3/**",
+                "~/Library/Arduino15/packages/esp32/hardware/esp32/2.0.17/libraries/**",
+                "~/Library/Arduino15/packages/esp32/hardware/esp32/2.0.17/cores/**",
+                "~/Library/Arduino15/packages/esp32/hardware/esp32/2.0.17/tools/**",
+                "~/prj/arduino2/libraries/**",
+                "."
+            ],
+            "forcedInclude": [
+                "~/Library/Arduino15/packages/esp32/hardware/esp32/2.0.17/cores/esp32/Arduino.h"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "defines": [ "ESP32" ]
+        }
+    ]
+}
