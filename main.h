@@ -10,10 +10,17 @@
 
 #include <pins_arduino.h>
 
-#define SECONDS 1000000        // Number of microseconds in 1 second.
-#define MINUTES 60 * SECONDS   // Number of microseconds in 1 minute.
-#define HOURS   60 * MINUTES   // Number of microseconds in 1 hour.
-#define DAYS    24 * HOURS     // Number of microseconds in 1 day.
+constexpr uint64_t SECONDS = 1000000ULL;          // µs in 1 second
+constexpr uint64_t MINUTES = 60 * SECONDS;        // µs in 1 minute
+constexpr uint64_t HOURS   = 60 * MINUTES;        // µs in 1 hour
+constexpr uint64_t DAYS    = 24 * HOURS;          // µs in 1 day
+
+/*
+#define SECONDS 1000000ULL         // Number of microseconds in 1 second.
+#define MINUTES 60000000ULL        // Number of microseconds in 1 minute.
+#define HOURS   3600000000ULL      // Number of microseconds in 1 hour.
+#define DAYS    86400000000ULL     // Number of microseconds in 1 day.
+*/
 
 //
 // The following line enables debug output.

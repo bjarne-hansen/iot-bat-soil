@@ -11,7 +11,7 @@
 #define PIN_SENSOR        A1                            // The analog PIN to read sensor data from.
 #define PIN_SENSOR_POWER  D5                            // The digital PIN to turn on sensor.
 
-const uint64_t sleepDuration = 10 * SECONDS;            // Deep sleep in microseconds.
+const uint64_t sleepDuration = 1 * HOURS;       // Deep sleep in microseconds.
                                                         // Time the device is sleeping until waking up next time.
                                                         // Use SECONDS, MINUTES, HOURS or DAYS defines to make it easier 
                                                         // to read.
