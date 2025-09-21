@@ -11,7 +11,7 @@
 #define PIN_SENSOR        A1                            // The analog PIN to read sensor data from.
 #define PIN_SENSOR_POWER  D5                            // The digital PIN to turn on sensor.
 
-const uint64_t sleepDuration = 10 * SECONDS;            // Deep sleep in microseconds.
+const uint64_t sleepDuration = 1 * HOURS;       // Deep sleep in microseconds.
                                                         // Time the device is sleeping until waking up next time.
                                                         // Use SECONDS, MINUTES, HOURS or DAYS defines to make it easier 
                                                         // to read.
@@ -27,7 +27,7 @@ const unsigned long advertisingDuration = 2000;         // Advertising time in m
 // End of settings.
 // *****************************************************************************
 
-const String VERSION = "1.0.0";                         // Software version.   
+const String VERSION = "1.0.1";                         // Software version.   
 
 #define DEVICE_NAME_PREFIX "IoT-"                       // Each Bluetooth device has a name with prefix + MAC address.
                                                         // The Bluetooth Gateway uses this name to identify the devices

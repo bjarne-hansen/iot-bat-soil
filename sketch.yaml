@@ -1,2 +1,2 @@
 default_fqbn: esp32:esp32:XIAO_ESP32C3:PartitionScheme=huge_app
-default_port: /dev/cu.usbmodem14201
+default_port: /dev/cu.usbmodem14101
