@@ -27,7 +27,7 @@ const unsigned long advertisingDuration = 2000;         // Advertising time in m
 // End of settings.
 // *****************************************************************************
 
-const String VERSION = "1.0.0";                         // Software version.   
+const String VERSION = "1.0.1";                         // Software version.   
 
 #define DEVICE_NAME_PREFIX "IoT-"                       // Each Bluetooth device has a name with prefix + MAC address.
                                                         // The Bluetooth Gateway uses this name to identify the devices
