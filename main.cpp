@@ -10,8 +10,11 @@
 #define PIN_BATTERY       A0                            // The analog PIN to read battery voltage from.
 #define PIN_SENSOR        A1                            // The analog PIN to read sensor data from.
 #define PIN_SENSOR_POWER  D5                            // The digital PIN to turn on sensor.
+ 
+const uint64_t warmupBootCount = 12;                    // Number of boots considered "warmup" boots.
+const uint64_t warmupSleepDuration = 10 * SECONDS;      // Number of milliseconds to sleep during "warmup".
 
-const uint64_t sleepDuration = 1 * HOURS;       // Deep sleep in microseconds.
+const uint64_t sleepDuration = 1 * HOURS;               // Deep sleep in microseconds.
                                                         // Time the device is sleeping until waking up next time.
                                                         // Use SECONDS, MINUTES, HOURS or DAYS defines to make it easier 
                                                         // to read.
@@ -27,7 +30,7 @@ const unsigned long advertisingDuration = 2000;         // Advertising time in m
 // End of settings.
 // *****************************************************************************
 
-const String VERSION = "1.0.1";                         // Software version.   
+const String VERSION = "1.0.2";                         // Software version.   
 
 #define DEVICE_NAME_PREFIX "IoT-"                       // Each Bluetooth device has a name with prefix + MAC address.
                                                         // The Bluetooth Gateway uses this name to identify the devices
@@ -131,7 +134,13 @@ void setup()
   debug_printf("Disabled all wakeup sources: %d\n", error);
 
   // Enable the timer wake-up source.
-  error = esp_sleep_enable_timer_wakeup(sleepDuration);
+  if (bootCount < warmupBootCount)
+    // When boot count is less that the warmupBootCount we use the special
+    // warmupSleepDuration.
+    error = esp_sleep_enable_timer_wakeup(warmupSleepDuration);
+  else
+    // After the warmup period we use the normal sleepDuration.
+    error = esp_sleep_enable_timer_wakeup(sleepDuration);
   debug_printf("Enabled timer wakeup in %d us: %d\n", sleepDuration, error);
 
   // Go to sleep.
